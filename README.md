@@ -1,17 +1,23 @@
-# React + Vite
+# Crystal Lines
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crystal Lines is a tattoo artist portfolio and brand experience built around a refined, gallery-like aesthetic. The project presents an artist whose work blends clean linework, botanical imagery, and black-and-gray composition into a distinctive visual identity. Rather than feeling like a generic template, the site is designed to feel immersive, personal, and editorial—mirroring the craftsmanship behind the tattoos themselves.
 
-Currently, two official plugins are available:
+## Project focus
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio is built to showcase the artist’s story, style, and selected work in a way that feels polished and memorable. It introduces the brand through a cinematic hero section, tells the story of the artist’s evolution in the About section, and highlights a curated gallery of tattoos and artwork that reflect the creative direction of the studio.
 
-## React Compiler
+## What the experience includes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- A bold hero section establishing the artist’s name and identity
+- A narrative-driven About section that frames the artist’s journey and aesthetic
+- A gallery of selected work to present tattoo pieces and design language
+- A dedicated work view for browsing portfolio pieces in a more focused format
+- A contact-focused flow that invites inquiries and commissions
 
-## Expanding the ESLint configuration
+## Design direction
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Crystal_Lines
+Crystal Lines leans into a minimal but expressive visual language: strong typography, elegant spacing, soft contrast, and black-and-gray imagery. The site is meant to feel luxurious and intimate, using pacing and structure to echo the artistic quality of fine tattoo work.
+
+## Purpose
+
+This project exists as a digital portfolio for a tattoo artist—not as a starter app or a template someone would clone. It is designed to communicate the artist’s creative voice, build trust with potential clients, and create a memorable first impression that reflects the work itself.
