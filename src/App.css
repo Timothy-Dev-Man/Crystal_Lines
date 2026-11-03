@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   GLOBAL THEME
+======================================== */
+
+:root {
+  /* COLOR PALETTE */
+
+  --ice: #C6D7E6;
+  --slate: #444A64;
+  --purple: #B667D0;
+  --navy: #010E1A;
+  --black: #000000;
+
+  /* BACKGROUNDS */
+
+  --bg-primary: var(--navy);
+  --bg-secondary: var(--slate);
+  --bg-dark: var(--black);
+
+  /* TEXT */
+
+  --text-primary: var(--ice);
+  --text-secondary: var(--slate);
+  --text-accent: var(--purple);
+
+  /* TYPOGRAPHY */
+
+  --font-primary: "DM Sans", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-script: "Allura", cursive;
+
+  /* SPACING */
+
+  --section-padding: clamp(60px, 8vw, 120px);
+  --container-width: 1400px;
+
+  /* EFFECTS */
+
+  --border-color: rgba(198, 215, 230, 0.2);
+  --purple-glow: 0 0 25px rgba(182, 103, 208, 0.15);
+
+  --transition: 0.3s ease;
+
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 16px;
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.accent-text {
+  color: var(--purple);
+}
+
+.script-text {
+  font-family: var(--font-script);
+}
+
+.display-text {
+  font-family: var(--font-display);
+}
+
+/* ========================================
+   LINKS & BUTTONS
+======================================== */
+
+a {
+  transition: color var(--transition);
+}
+
+button {
+  color: inherit;
+  background: transparent;
+  transition: all var(--transition);
+}
+
+button:hover {
+  color: var(--purple);
+}
+
+/* ========================================
+   SHARED LAYOUT
+======================================== */
+
+.container {
+  width: min(90%, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  width: 100%;
+  padding: var(--section-padding) 0;
+}
+
+.section-title {
+  margin-bottom: 20px;
+
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--text-primary);
+}
+
+.section-description {
+  max-width: 650px;
+  color: rgba(198, 215, 230, 0.75);
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--slate);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple);
+}
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  background: var(--purple);
+  color: var(--black);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+  :root {
+    --section-padding: 60px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
