@@ -1,0 +1,151 @@
+.About_Me {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: clamp(3rem, 8vw, 8rem);
+
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* TEXT STEPS */
+
+.About_Me_Steps {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.About_Me_Card {
+    min-height: 100svh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.About_Me_Card_Content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    max-width: 500px;
+
+    color: var(--text-color, #eae5dd);
+}
+
+.About_Me_Card_Content h3 {
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+
+    margin: 0;
+}
+
+.About_Me_Card_Content p {
+    max-width: 520px;
+
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.9;
+
+    color: var(--muted-color, #aaa39a);
+
+    margin: 0;
+}
+
+/* STICKY IMAGE */
+
+.About_Me_Visual {
+    grid-column: 2;
+    grid-row: 1;
+
+    position: sticky;
+    top: 0;
+    align-self: start;
+
+    height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About_Me_Visual_Image {
+    display: block;
+
+    width: 100%;
+    max-width: 520px;
+    height: 78svh;
+
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+
+    animation: AboutImageReveal 0.6s ease both;
+}
+
+/* IMAGE TRANSITION */
+
+@keyframes AboutImageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .About_Me {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        padding-inline: 6%;
+    }
+
+    .About_Me_Steps {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3rem, 10vw, 5rem);
+    }
+
+    .About_Me_Visual {
+        display: none;
+    }
+
+    .About_Me_Card {
+        min-height: auto;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .About_Me_Card_Content {
+        gap: 1rem;
+    }
+
+    .About_Me_Card_Content h3 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .About_Me_Card_Content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .About_Me_Visual_Image {
+        animation: none;
+    }
+}
